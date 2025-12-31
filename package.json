@@ -1,0 +1,32 @@
+{
+  "name": "weather-analytics-platform",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+  "start": "node backend/src/server.js",
+  "dev": "nodemon"
+},
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/INDUDHAR15/weather-analytics-platform.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/INDUDHAR15/weather-analytics-platform/issues"
+  },
+  "homepage": "https://github.com/INDUDHAR15/weather-analytics-platform#readme",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
