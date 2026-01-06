@@ -2,13 +2,13 @@
   "name": "weather-analytics-platform",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "backend/src/server.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
     "start": "node backend/src/server.js",
-    "dev": "nodemon"
+    "dev": "nodemon backend/src/server.js"
   },
   "repository": {
     "type": "git",
