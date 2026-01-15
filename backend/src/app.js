@@ -1,5 +1,4 @@
-require("dotenv").config({path: '../../.env'});
-
+require('dotenv').config(); 
 const express = require('express');
 const weatherRoutes = require('./routes/weather.routes');
 const errorMiddleware = require('./middlewares/error.middleware');
