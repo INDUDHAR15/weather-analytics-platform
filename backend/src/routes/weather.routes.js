@@ -1,9 +1,6 @@
-const router = require("express").Router();
-const { Weather } = require("../models");
+const router = require('express').Router();
+const controller = require('../controller/weather.controller');
 
-router.get("/", async (_, res) => {
-  const data = await Weather.findAll({ limit: 100 });
-  res.json(data);
-});
+router.get('/', controller.getWeather);
 
 module.exports = router;

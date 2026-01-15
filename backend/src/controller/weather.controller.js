@@ -1,13 +1,10 @@
-const service =require('../service/weather.service');
+const service = require('../services/weather.services');
 
-exports.getWeather = async (requestAnimationFrame, res, next) => {
-    try {
-        const data = await service.getall();
-        res.json({
-            success: true,
-            data
-        });
-    } catch (error) {
-        next(error);
-    }
-}
+exports.getWeather = async (req, res, next) => {
+  try {
+    const data = await service.getAll();
+    res.json({ success: true, data });
+  } catch (err) {
+    next(err);
+  }
+};
