@@ -32,15 +32,15 @@ module.exports = {
         type: Sequelize.INTEGER
       },
 
-      wind_speed: {
+      windSpeed: {
         type: Sequelize.FLOAT
       },
 
-      weather_condition: {
+      weatherCondition: {
         type: Sequelize.STRING
       },
 
-      recorded_at: {
+      recordedAt: {
         type: Sequelize.DATE,
         allowNull: false
       },
@@ -49,13 +49,13 @@ module.exports = {
         type: Sequelize.STRING
       },
 
-      created_at: {
+      createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
         defaultValue: Sequelize.fn("NOW")
       },
 
-      updated_at: {
+      updatedAt: {
         allowNull: false,
         type: Sequelize.DATE,
         defaultValue: Sequelize.fn("NOW")
@@ -63,11 +63,11 @@ module.exports = {
     });
 
     // Indexes for analytics performance
-    await queryInterface.addIndex("weather_data", ["city", "recorded_at"]);
-    await queryInterface.addIndex("weather_data", ["recorded_at"]);
+    await queryInterface.addIndex("weather_data", ["city", "recordedAt"]);
+    await queryInterface.addIndex("weather_data", ["recordedAt"]);
   },
 
-  // async down(queryInterface) {
-  //   await queryInterface.dropTable("weather_data");
-  // }
+  async down(queryInterface) {
+    await queryInterface.dropTable("weather_data");
+  }
 };
