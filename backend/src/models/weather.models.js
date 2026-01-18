@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       country: {
         type: DataTypes.STRING(50),
-        allowNull: false
+        allowNull: true
       },
       temperature: {
         type: DataTypes.FLOAT,
