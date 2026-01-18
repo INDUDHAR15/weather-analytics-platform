@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const {Sequelize, DataTypes} = require('sequelize');
+const {Sequelize} = require('sequelize');
 const dbConfig = require('../config/database');
 
 const basename = path.basename(__filename);
@@ -39,5 +39,6 @@ Object.keys(db).forEach(modelName => {
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
+db.Weather = db['weather_data'];
 
 module.exports = db;

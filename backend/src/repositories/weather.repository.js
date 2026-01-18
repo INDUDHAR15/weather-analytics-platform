@@ -1,4 +1,5 @@
-const { Weather } = require('../models');
+const db = require('../models');
+const Weather = db.Weather;
 
 exports.createWeather = async (data) => {
   console.log("Weather Model:", Weather);
