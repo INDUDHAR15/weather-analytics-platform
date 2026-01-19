@@ -39,3 +39,6 @@ backend/.sequelizerc
 backend/node_modules/
 node_modules/
 ../.gitignore
+.env
+backend/.env
+python_analytics/db/connection.py
