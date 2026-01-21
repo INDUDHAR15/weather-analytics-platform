@@ -5,8 +5,14 @@ router = APIRouter()
 
 @router.get("/summary")
 def summary():
-    return get_summary()
+    return {
+        "success": True,
+        "data": get_summary()
+    }
 
 @router.get("/daily")
 def daily():
-    return get_daily_stats()
+    return {
+        "success": True,
+        "data": get_daily_stats()
+    }
