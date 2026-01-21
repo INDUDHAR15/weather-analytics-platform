@@ -5,8 +5,6 @@ const errorMiddleware = require('./middlewares/error.middleware');
 
 const app = express();
 app.use(express.json());
-app.use("/api/weather/analytics", require("./routes/weather.analytics.routes"));
-
 
 app.get("/health", (req, res) => {
     res.status(200).json({status:"OK", service: "Weather Analytics Platforms" });
