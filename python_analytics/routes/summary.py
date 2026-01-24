@@ -1,7 +1,6 @@
-from fastapi import APIRouter
-from services.analytics_service import get_summary, get_daily_stats
+router = APIRouter(prefix="/analytics", tags=["Analytics"])
 
-router = APIRouter()
+from services.analytics_service import get_summary, get_daily_stats
 
 @router.get("/summary")
 def summary():
