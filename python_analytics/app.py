@@ -1,10 +1,13 @@
 from fastapi import FastAPI
-from routes.summary import router as summary_router
+from db.connection import init_db_pool
+from routers.analytics import router as analytics_router
 
-app = FastAPI(title="Weather Analytics Service")
+app = FastAPI()
 
-app.include_router(summary_router, prefix="/analytics")
 
-@app.get("/health")
-def health():
-    return {"status": "ok"}
+@app.on_event("startup")
+def startup():
+    init_db_pool()
+
+
+app.include_router(analytics_router, prefix="/analytics")

@@ -41,3 +41,8 @@ node_modules/
 ../.gitignore
 .env
 backend/.env
+
+node_modules/
+venv/
+.env
+__pycache__/
